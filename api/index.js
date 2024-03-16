@@ -3,8 +3,20 @@ import axios from 'axios'
 const instance = axios.create({
   baseURL: 'http://localhost:3000',
 })
-async function fetchProductId(productId) {
-  return await instance.get(`/products/${productId}`)
+function fetchProducts() {
+  return instance.get(`/products`)
 }
-
-export { fetchProductId }
+function fetchProductId(productId) {
+  return instance.get(`/products/${productId}`)
+}
+function fetchProductByKeyword(keyword) {
+  return instance.get(`/products`, {
+    params: {
+      name_like: keyword,
+    },
+  })
+}
+function createCartItem(cartItem) {
+  return instance.post('/carts', cartItem)
+}
+export { fetchProducts, fetchProductId, fetchProductByKeyword, createCartItem }
