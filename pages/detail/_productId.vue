@@ -11,7 +11,7 @@
       <div class="side-panel">
         <p class="name">name: {{ product.name }}</p>
         <p class="price">price: {{ product.price }}</p>
-        <button type="button" @click="addToCart">Add to Cart</button>
+        <button type="button" @click="addToCart">카트에 담기</button>
       </div>
     </div>
   </div>

@@ -183,13 +183,13 @@
   ],
   "carts": [
     {
-      "id": 6,
-      "name": "Handmade Granite Mouse",
-      "price": "591.00",
+      "id": 2,
+      "name": "Handcrafted Frozen Pizza",
+      "price": "315.00",
       "imageUrl": "http://placeimg.com/640/480/fashion"
     },
     {
-      "id": 7,
+      "id": 3,
       "name": "Refined Fresh Chicken",
       "price": "209.00",
       "imageUrl": "http://placeimg.com/640/480/fashion"
