@@ -36,17 +36,10 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/axios'],
 
-  publicRuntimeConfig: {
-    axios: {
-      browserBaseURL: process.env.devURL,
-    },
+  axios: {
+    baseURL: process.env.BASE_URL,
   },
 
-  privateRuntimeConfig: {
-    axios: {
-      baseURL: process.env.baseURL,
-    },
-  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [({ isLegacy }) => isLegacy && 'axios'],
@@ -58,8 +51,8 @@ export default {
   },
 
   // env config
-  env: {
-    baseURL:
-      process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3000',
-  },
+  // env: {
+  //   baseURL:
+  //     process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3000',
+  // },
 }
